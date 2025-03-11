@@ -1,0 +1,262 @@
+/* Основные стили */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Шапка */
+.navbar {
+    background-color: #000;
+    color: #fff;
+}
+
+.navbar .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .btn {
+    margin: 0 5px;
+}
+
+.navbar .form-control {
+    width: 250px;
+}
+
+/* Карточки постов */
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-body h5 {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-body p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.card-body img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* Кнопка подписки */
+.btn-dark {
+    background-color: #333;
+    color: #fff;
+    border: none;
+}
+
+.btn-outline-dark {
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #333;
+}
+
+.btn-dark:hover, .btn-outline-dark:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+.btn-light {
+    background-color: #f7f7f7;
+    color: #333;
+    border: none;
+}
+
+.btn-light:hover {
+    background-color: #e5e5e5;
+}
+
+/* Подсчёт лайков и комментариев */
+.d-flex span {
+    font-size: 1rem;
+}
+
+/* Модальные окна */
+#createPostModal {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#createPostModal .bg-white {
+    width: 500px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Стиль кнопки для комментариев */
+textarea {
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+}
+
+/* Иконка сообщений */
+#follow-btn {
+    cursor: pointer;
+}
+
+/* Профиль */
+.profile-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.profile-container img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.profile-container h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.profile-container p {
+    font-size: 1rem;
+    color: #888;
+}
+
+.profile-container button {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+/* Общие стили для кнопок */
+button:focus {
+    outline: none;
+}
+.avatar {
+    width: 35px;  /* Новый размер ширины */
+    height: 35px; /* Новый размер высоты */
+    border-radius: 50%; /* Делаем круглым */
+    object-fit: cover; /* Чтобы не растягивалось */
+}
+
+/* Если аватар отсутствует — используем стандартную иконку */
+.default-avatar {
+    background: url('/static/icons/default_avatar.jpg') no-repeat center center;
+    background-size: cover;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Аватар в шапке */
+.header-avatar {
+    width: 40px;
+    height: 40px;
+}
+
+/* Аватар в профиле */
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+}
+
+/* Аватар в комментариях */
+.comment-avatar {
+    width: 30px;
+    height: 30px;
+}
+
+/* Размер аватара в посте */
+.post-avatar {
+    width: 40px;  /* Новый размер */
+    height: 40px;
+    border-radius: 50%;  /* Делаем круглым */
+    object-fit: cover;  /* Обрезка, чтобы картинка не растягивалась */
+}
+
+.profile-avatar {
+    width: 80px; /* Размер аватара */
+    height: 80px;
+    border-radius: 50%; /* Делаем круглым */
+    object-fit: cover;
+    margin-right: 20px; /* Отступ справа, увеличь если нужно */
+}
+
+#edit-menu {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    width: 360px;
+    font-family: Arial, sans-serif;
+}
+
+#edit-menu h5 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.profile-avatar-preview {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.profile-avatar-preview img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ddd;
+}
+
+#edit-menu input[type="file"],
+#edit-menu textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 8px;
+}
+
+#edit-menu textarea {
+    height: 90px;
+    resize: none;
+}
+
+#edit-menu .btn-dark {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
